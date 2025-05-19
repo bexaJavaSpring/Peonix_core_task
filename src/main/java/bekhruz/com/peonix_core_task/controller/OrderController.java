@@ -5,6 +5,7 @@ import bekhruz.com.peonix_core_task.dto.OrderDto;
 import bekhruz.com.peonix_core_task.dto.OrderRequest;
 import bekhruz.com.peonix_core_task.dto.PaymentRequest;
 import bekhruz.com.peonix_core_task.service.IOrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,6 +16,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/orders")
+@Tag(name = "Order controller")
 @RequiredArgsConstructor
 public class OrderController {
 

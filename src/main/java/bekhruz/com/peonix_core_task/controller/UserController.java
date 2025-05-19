@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
-@Tag(name = "user controller")
+@Tag(name = "User controller")
 @RequiredArgsConstructor
 public class UserController {
 

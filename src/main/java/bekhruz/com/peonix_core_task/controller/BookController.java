@@ -4,6 +4,7 @@ import bekhruz.com.peonix_core_task.dto.BookDto;
 import bekhruz.com.peonix_core_task.dto.BookRequest;
 import bekhruz.com.peonix_core_task.dto.DataDto;
 import bekhruz.com.peonix_core_task.service.IBookService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,6 +15,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/books")
+@Tag(name = "Book controller")
 @RequiredArgsConstructor
 public class BookController {
 
