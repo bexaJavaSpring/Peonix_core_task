@@ -1,0 +1,39 @@
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      FAIL_ON_EMPTY_BEANS: 'false'
+  application:
+    name: DT-Learning
+  profiles:
+    active: local
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: bexruzizzatullayev@gmail.com
+    password: fozy lupv rjlh korq
+    protocol: smtp
+    default-encoding: UTF-8
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+jwt:
+  token:
+    secret: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+
+server:
+  tomcat:
+    max-connections: '1000'
+    threads:
+      max: '200'
+  port: '7777'

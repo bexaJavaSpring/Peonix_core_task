@@ -1,0 +1,33 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    open-in-view: 'false'
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        enable_lazy_load_no_trans: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      idle-timeout: '30000'
+      maximum-pool-size: '10'
+      connection-timeout: '20000'
+      pool-name: HikariCP
+      max-lifetime: '1800000'
+      minimum-idle: '5'
+    password: bexa
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/peonix_core_db
+  sql:
+    init:
+      platform: postgres
