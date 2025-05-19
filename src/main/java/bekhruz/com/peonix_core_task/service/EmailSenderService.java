@@ -44,7 +44,7 @@ public class EmailSenderService {
         }
         boolean isSent = sendMessage(toEmail, "Verification Code", otp + "");
         if (!isSent) {
-            throw new GenericRuntimeException("verification.code.could.not.send");
+            log.info("verification.code.could.not.send");
         }
         return otp + "";
     }
